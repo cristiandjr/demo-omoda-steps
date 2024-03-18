@@ -94,7 +94,7 @@ function App() {
 
         <div
           style={{
-            marginTop: "-1rem",
+            marginTop: "0rem",
             marginLeft: "1rem",
             display: "flex",
             gap: "5rem",
