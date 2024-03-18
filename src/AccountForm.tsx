@@ -11,6 +11,8 @@ type LocationData = {
   date: string;
 };
 
+
+
 type LocationFormProps = {
   updateFields: (fields: Partial<LocationData>) => void;
   onSearchAvailability: () => void;
@@ -36,6 +38,8 @@ export function LocationForm({
     "Andes Motor": ["Andes Motor Cantagallo", "Andes Motor Antofagasta"],
     "Automotora Magallanes": ["Automotora Magallanes"],
   };
+
+  
 
   const handleSelectionTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     updateFields({ selectionType: e.target.value });

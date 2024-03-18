@@ -76,18 +76,12 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <form onSubmit={onSubmit}>
-        <div
-          className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-          style={{
-            position: "absolute",
-            top: "6rem",
-            left: "2rem",
-            zIndex: "1000",
-          }}
-        >
-          {currentStepIndex + 1} / {steps.length}
+        <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+          <span className="absolute mt-20 ml-5 px-3 py-1 rounded-full text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            {currentStepIndex + 1} / {steps.length}
+          </span>
         </div>
 
         {step}
