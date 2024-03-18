@@ -55,12 +55,20 @@ function App() {
     });
   }
 
+  // Suponiendo que `onSearchAvailability` sea específica para LocationForm,
+  // aquí se define la función.
+  function onSearchAvailability() {
+    // Implementación de la función...
+    console.log("Buscando disponibilidad...");
+  }
+
+
   //
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } =
     useMultistepFrom([
       <UserForm {...data} updateFields={updateFields} />,
       <ServiceForm {...data} updateFields={updateFields} />,
-      <LocationForm {...data} updateFields={updateFields} />,
+      <LocationForm {...data} updateFields={updateFields} onSearchAvailability={onSearchAvailability} />,
     ]);
 
   //
