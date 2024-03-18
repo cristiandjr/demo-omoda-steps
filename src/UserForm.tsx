@@ -59,11 +59,20 @@ export function UserForm({
   // Considerando un rango de años más amplio por defecto
   const getAnios = (): number[] => {
     let anios = [];
-    for (let year = 1990; year <= new Date().getFullYear() + 1; year++) {
-      anios.push(year);
+    const rango = aniosPorTipoYModelo[tipo]?.[modelo];
+    if (rango) {
+      for (let year = rango.inicio; year <= rango.fin; year++) {
+        anios.push(year);
+      }
+    } else {
+      // Rango por defecto si no hay selección o no se encuentra el rango específico
+      for (let year = 1990; year <= new Date().getFullYear() + 1; year++) {
+        anios.push(year);
+      }
     }
     return anios;
   };
+  
 
   return (
     <FormWrapper title="Paso 1">
